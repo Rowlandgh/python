@@ -7,7 +7,7 @@ def check_keydown_events(event,ship,bullets):
         ship.moving_right = True
     elif event.key == pygame.K_LEFT:
         ship.moving_left = True
-    elif event.key == pygame.K_SPACE
+    elif event.key == pygame.K_SPACE:
         new_bullet = Bullet(ai_settings,screen,ship)    #创建一个Bullet实例
         bullets.add(new_bullet)
 
