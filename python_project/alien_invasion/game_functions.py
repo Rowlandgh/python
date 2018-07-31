@@ -47,10 +47,7 @@ def start_game(ai_settings,screen,stats,sb,play_button,ship,aliens,bullets):
     stats.reset_stats()
     stats.game_active = True
 
-    sb.prep_score()
-    sb.prep_high_score()
-    sb.prep_level()
-    sb.prep_ships()
+    sb.prep_image()
 
     aliens.empty()
     bullets.empty()
