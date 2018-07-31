@@ -18,8 +18,6 @@ for files in file_list:                                             #处理多�
     get_words_num(files)  
 
 
-
-
 def get_words_num(file_name):
     try:
         with open (file_name) as f_o:

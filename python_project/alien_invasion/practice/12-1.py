@@ -4,7 +4,7 @@ import pygame
 class Ship():
     def __init__(self,screen):
         self.screen = screen
-        self.image = pygame.image.load('practice\ship.bmp')    
+        self.image = pygame.image.load('D:\\python_git\\python_project\\alien_invasion\\practice\\ship.bmp')    
         self.rect = self.image.get_rect()                       #get_rect()获取相应surface的属性rect
         self.screen_rect = screen.get_rect()                    
 

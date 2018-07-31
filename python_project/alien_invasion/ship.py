@@ -1,10 +1,13 @@
 import pygame
-class Ship():
+from pygame.sprite import Sprite
+
+class Ship(Sprite):
     def __init__(self,ai_settings,screen):
+        super().__init__()                                   #super(ship,self).__init__()
             #初始化飞船
         self.screen = screen
         self.ai_settings = ai_settings
-        self.image = pygame.image.load('images/ship.bmp')       #pygame.image.load()加载图片
+        self.image = pygame.image.load('D:\\python_git\\python_project\\alien_invasion\\images\\ship.bmp')       #pygame.image.load()加载图片
             #设定飞船的起始位置
         self.rect = self.image.get_rect()                       #get_rect()获取相应surface的属性rect
         self.screen_rect = screen.get_rect()                    #获取屏幕的矩形
@@ -22,7 +25,10 @@ class Ship():
         if self.moving_left and self.rect.left > self.screen_rect.left:           #禁止飞出边缘
             self.center -= self.ai_settings.ship_speed_factor
             #根据self.center更新rect的对象center
-        self.rect.centerx = self.center
+        self.rect.centerx = self.center                                #更新飞船的位置坐标
 
     def blitme(self):
         self.screen.blit (self.image,self.rect)                 #blit把图像按照坐标绘制在屏幕上
+
+    def center_ship(self):
+        self.center = self.screen_rect.centerx
