@@ -1,5 +1,5 @@
-from random import choice
+from die import Die
+import pygal
 
-for i in range(21):
-    num = choice([1,2,3])
-    print(num)
+die = Die()
+results = []
